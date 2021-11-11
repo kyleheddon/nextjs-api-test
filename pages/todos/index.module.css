@@ -1,0 +1,14 @@
+.error {
+    color: red;
+    font-size: 0.75rem;
+}
+
+.delete {
+    margin-right: 0.25rem;
+    font-size: 0.5rem;
+    vertical-align: middle;
+}
+
+.checkbox {
+    vertical-align: middle;
+}

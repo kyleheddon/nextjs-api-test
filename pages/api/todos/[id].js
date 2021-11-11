@@ -17,12 +17,12 @@ export default async function(req, res) {
                 break;
             }
             todo = await getTodo(id);
-            res.status(200).json(todo);
+            res.status(200).json({ todo });
             break;
         case "GET":
             todo = await getTodo(id);
             if (todo) {
-                res.status(200).json(todo);
+                res.status(200).json({ todo });
             } else {
                 send404(res);
             }
@@ -34,7 +34,7 @@ export default async function(req, res) {
                 send404IfNotFoundError(e, res);
                 break;
             }
-            res.status(200).json({ id });
+            res.status(200).json({});
             break;
         default:
             send404(res);
@@ -51,5 +51,5 @@ function send404IfNotFoundError(e, res) {
 }
 
 function send404(res) {
-    res.status(404).send('Not found');
+    res.status(404).json({ error: 'Not found' });
 }
