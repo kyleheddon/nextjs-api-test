@@ -1,1 +1,9 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+## Start server
+```
+npm run dev
+```
+
+## DB Migration
+```
+npx prisma migrate dev
+```
